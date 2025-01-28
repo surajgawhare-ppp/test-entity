@@ -6,7 +6,7 @@ export enum testEntityVar {
     goal = 'goal',
 }
 
-export enum moltar {
+export enum VersonUp {
     yes = 'not out',
     no = 'out',
 }
