@@ -10,3 +10,8 @@ export enum mariaVar {
     yes = 'not out',
     no = 'out',
 }
+
+export enum mamariaVar {
+    yes = 'not out',
+    no = 'out',
+}
