@@ -6,7 +6,7 @@ export enum testEntityVar {
     goal = 'goal',
 }
 
-export enum VersonUp {
+export enum VersonUpNow {
     yes = 'not out',
     no = 'out',
 }
