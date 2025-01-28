@@ -31,9 +31,7 @@
         "type": "git",
         "url": "https://github.com/surajgawhare-ppp/test-entity"
     },
-    "dependencies": {
-        "tslib": "^2.3.0"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@types/node": "^14.17.11",
         "@typescript-eslint/eslint-plugin": "^5.62.0",
