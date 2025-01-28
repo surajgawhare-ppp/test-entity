@@ -25,12 +25,12 @@
         "prepare": "npm run build",
         "format": "prettier --write \"src/**/*.ts\""
     },
-    "author": "max",
-    "license": "ISC",
     "repository": {
         "type": "git",
         "url": "https://github.com/surajgawhare-ppp/test-entity"
     },
+    "author": "max",
+    "license": "ISC",
     "dependencies": {},
     "devDependencies": {
         "@types/node": "^14.17.11",
@@ -46,13 +46,7 @@
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-sort-destructure-keys": "^1.6.0"
     },
-    "volta": {
-        "node": "12.22.5"
-    },
     "files": [
         "dist"
-    ],
-    "publishConfig": {
-        "access": "public"
-    }
+    ]
 }
