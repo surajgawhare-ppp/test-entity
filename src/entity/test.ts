@@ -15,3 +15,8 @@ export enum mamariaVar {
     yes = 'not out',
     no = 'out',
 }
+
+export enum coco {
+    yes = 'not out',
+    no = 'out',
+}
