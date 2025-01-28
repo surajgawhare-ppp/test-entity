@@ -6,7 +6,7 @@ export enum testEntityVar {
     goal = 'goal',
 }
 
-export enum mariatar {
+export enum moltar {
     yes = 'not out',
     no = 'out',
 }
