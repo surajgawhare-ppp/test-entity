@@ -5,3 +5,8 @@ export enum testEntityVar {
     max = 'tool',
     goal = 'goal',
 }
+
+export enum mariaVar {
+    yes = 'not out',
+    no = 'out',
+}
