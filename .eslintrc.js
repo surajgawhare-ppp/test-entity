@@ -11,7 +11,7 @@ module.exports = {
         project: './tsconfig.json',
     },
     plugins: ['eslint-plugin-jsdoc', 'eslint-plugin-prefer-arrow', '@typescript-eslint', 'sort-destructure-keys', 'prettier'],
-    ignorePatterns: ['util'],
+    ignorePatterns: ['util', 'dist/cjs/**/*', 'dist/esm/**/*'],
     rules: {
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': [

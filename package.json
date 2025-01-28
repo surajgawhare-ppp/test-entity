@@ -16,7 +16,7 @@
     "scripts": {
         "lint:fix": "eslint . --fix --cache",
         "lint": "eslint ./src --ext .ts,.tsx",
-        "prebuild": "npm run lint; npm run lint:fix",
+        "prebuild": "npm run lint",
         "dts": "tsc ./src/index.ts --declaration --emitDeclarationOnly --esModuleInterop --downlevelIteration --outdir ./dist",
         "build:esm": "esbuild ./src/index.ts --tsconfig=tsconfig.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=esm --outfile=./dist/esm/index.mjs --analyze",
         "build:cjs": "esbuild ./src/index.ts --tsconfig=tsconfig.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=cjs --outfile=./dist/cjs/index.js --analyze",

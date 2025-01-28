@@ -26,6 +26,6 @@
     "types": ["node"],
     "typeRoots": ["node_modules/@types"]
   },
-  "include": ["src/**/*.ts", "dist/**/*.ts", ".eslintrc.js"],
+  "include": [".eslintrc.js", "src/**/*.ts", "dist/**/*.ts"],
   "exclude": ["node_modules"]
 }
