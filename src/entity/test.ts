@@ -6,22 +6,7 @@ export enum testEntityVar {
     goal = 'goal',
 }
 
-export enum mariaVar {
-    yes = 'not out',
-    no = 'out',
-}
-
-export enum mamariaVar {
-    yes = 'not out',
-    no = 'out',
-}
-
-export enum coco {
-    yes = 'not out',
-    no = 'out',
-}
-
-export enum popy {
+export enum mariaVtetetar {
     yes = 'not out',
     no = 'out',
 }
