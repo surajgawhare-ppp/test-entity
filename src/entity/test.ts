@@ -20,3 +20,8 @@ export enum coco {
     yes = 'not out',
     no = 'out',
 }
+
+export enum popy {
+    yes = 'not out',
+    no = 'out',
+}
