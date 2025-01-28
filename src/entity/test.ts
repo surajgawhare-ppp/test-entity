@@ -1,8 +1,7 @@
-
-export const testEntityVar = {
-    mongo: "mongo",
-    typo: "typo",
-    vivo: "vivo",
-    max: "max",
-    goal: "goal"
+export enum testEntityVar {
+    mongo = 'maximum',
+    typo = 'royal',
+    vivo = 'next',
+    max = 'tool',
+    goal = 'goal',
 }

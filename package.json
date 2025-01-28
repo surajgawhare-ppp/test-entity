@@ -1,56 +1,60 @@
 {
-  "name": "testentity",
-  "version": "1.0.0",
-  "description": "entity for testing",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.mjs",
-  "types": "dist/index.d.ts",
-  "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/esm/index.mjs",
-    "require": "./dist/cjs/index.js"
-  },
-  "engines": {
-    "node": ">= 12"
-  },
-  "devDependencies": {
-    "@types/node": "^14.17.11",
-    "@typescript-eslint/eslint-plugin": "~5.62.0",
-    "@typescript-eslint/parser": "~5.62.0",
-    "esbuild": "^0.19.11",
-    "eslint": "~7.30.0",
-    "eslint-config-prettier": "~8.3.0",
-    "prettier": "^3.0.0",
-    "typescript": "^5.7.3"
-  },
-  "scripts": {
-    "versioning": "node -p \"'export const VERSION = ' + JSON.stringify(require('./package.json').version) + ';'\" > src/version.ts && npx prettier src/version.ts -w",
-    "lint": "eslint ./src --ext .ts,.tsx",
-    "prebuild": "npm run versioning; npm run lint",
-    "dts": "tsc ./src/index.ts --declaration --emitDeclarationOnly --esModuleInterop --downlevelIteration --outdir ./dist",
-    "build:esm": "esbuild ./src/index.ts --tsconfig=tsconfig.modules.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=esm --outfile=./dist/esm/index.mjs --analyze",
-    "build:cjs": "esbuild ./src/index.ts --tsconfig=tsconfig.release.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=cjs --outfile=./dist/cjs/index.js --analyze",
-    "build": "npm run build:esm; npm run build:cjs; npm run dts",
-    "build:watch": "tsc -w -p tsconfig.release.json",
-    "prepare": "npm run build",
-    "format": "prettier --write \"src/**/*.ts\""
-  },
-  "author": "max",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/surajgawhare-ppp/test-entity"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  },
-  "volta": {
-    "node": "12.22.5"
-  },
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "testentity",
+    "version": "1.0.0",
+    "description": "entity for testing",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.mjs",
+    "types": "dist/index.d.ts",
+    "exports": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/esm/index.mjs",
+        "require": "./dist/cjs/index.js"
+    },
+    "engines": {
+        "node": ">= 12"
+    },
+    "scripts": {
+        "lint:fix": "eslint . --fix --cache",
+        "lint": "eslint ./src --ext .ts,.tsx",
+        "prebuild": "npm run lint; npm run lint:fix",
+        "dts": "tsc ./src/index.ts --declaration --emitDeclarationOnly --esModuleInterop --downlevelIteration --outdir ./dist",
+        "build:esm": "esbuild ./src/index.ts --tsconfig=tsconfig.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=esm --outfile=./dist/esm/index.mjs --analyze",
+        "build:cjs": "esbuild ./src/index.ts --tsconfig=tsconfig.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=cjs --outfile=./dist/cjs/index.js --analyze",
+        "build": "npm run build:esm; npm run build:cjs; npm run dts",
+        "build:watch": "tsc -w -p tsconfig.json",
+        "prepare": "npm run build",
+        "format": "prettier --write \"src/**/*.ts\""
+    },
+    "author": "max",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/surajgawhare-ppp/test-entity"
+    },
+    "dependencies": {
+        "tslib": "^2.3.0"
+    },
+    "devDependencies": {
+        "@types/node": "^14.17.11",
+        "@typescript-eslint/eslint-plugin": "^5.62.0",
+        "@typescript-eslint/parser": "^5.56.0",
+        "esbuild": "^0.19.11",
+        "prettier": "^2.8.8",
+        "typescript": "^4.9.5",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^8.10.0",
+        "eslint-plugin-jsdoc": "^40.3.0",
+        "eslint-plugin-prefer-arrow": "^1.2.3",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-sort-destructure-keys": "^1.6.0"
+    },
+    "volta": {
+        "node": "12.22.5"
+    },
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    }
 }

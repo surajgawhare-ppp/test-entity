@@ -9,8 +9,23 @@
     "declaration": true,
     "outDir": "./dist",
     "emitDeclarationOnly": true,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strictPropertyInitialization": false,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "paths": {
+        "@types/*": ["./types/*"]
+    },
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "dist/**/*.ts", ".eslintrc.js"],
   "exclude": ["node_modules"]
 }
