@@ -1,3 +1,3 @@
-import { BankWorkingDaySchema } from './entity/test';
+import { tokenSchema } from './entity/test';
 
-export { BankWorkingDaySchema };
+export { tokenSchema };

@@ -1,18 +1,22 @@
 import { Schema } from 'mongoose';
 
-export const BankWorkingDaySchema: Schema = new Schema(
+export const tokenSchema: Schema = new Schema<any>(
     {
-        date: {
-            type: String,
+        userId: {
+            type: Schema.Types.ObjectId,
+            trim: true,
             required: true,
         },
-        isBankWorking: {
-            type: Boolean,
+
+        token: {
+            type: String,
+            trim: true,
             required: true,
         },
-        detail: {
+        status: {
             type: String,
-            required: false,
+            trim: true,
+            default: 'Active',
         },
     },
     {
