@@ -6,7 +6,7 @@ export enum testEntityVar {
     goal = 'goal',
 }
 
-export enum moltar {
-    yes = 'not out',
-    no = 'out',
-}
+export const MyConstVar = {
+    yes: 'not out',
+    no: 'out',
+};
