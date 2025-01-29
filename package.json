@@ -20,7 +20,7 @@
         "dts": "tsc ./src/index.ts --declaration --emitDeclarationOnly --esModuleInterop --downlevelIteration --outdir ./dist",
         "build:esm": "esbuild ./src/index.ts --tsconfig=tsconfig.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=esm --outfile=./dist/esm/index.mjs --analyze",
         "build:cjs": "esbuild ./src/index.ts --tsconfig=tsconfig.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=cjs --outfile=./dist/cjs/index.js --analyze",
-        "build": "npm run build:esm; npm run build:cjs; npm run dts",
+        "build": "npm run build:esm; npm run build:cjs",
         "build:watch": "tsc -w -p tsconfig.json",
         "prepare": "npm run build",
         "format": "prettier --write \"src/**/*.ts\""
@@ -45,8 +45,5 @@
         "eslint-plugin-prefer-arrow": "^1.2.3",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-sort-destructure-keys": "^1.6.0"
-    },
-    "files": [
-        "dist"
-    ]
+    }
 }
