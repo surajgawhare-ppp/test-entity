@@ -1,3 +1,3 @@
-import { testEntityVar } from './entity/test';
+import { BankWorkingDaySchema } from './entity/test';
 
-export { testEntityVar };
+export { BankWorkingDaySchema };

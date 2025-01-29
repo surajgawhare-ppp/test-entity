@@ -4,9 +4,9 @@
     "description": "entity for testing",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.mjs",
-    "types": "src/index.ts",
+    "types": "dist/index.d.ts",
     "exports": {
-        "types": "./src/index.ts",
+        "types": "./dist/index.d.ts",
         "import": "./dist/esm/index.mjs",
         "require": "./dist/cjs/index.js"
     },
@@ -20,7 +20,7 @@
         "dts": "tsc ./src/index.ts --declaration --emitDeclarationOnly --esModuleInterop --downlevelIteration --outdir ./dist",
         "build:esm": "esbuild ./src/index.ts --tsconfig=tsconfig.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=esm --outfile=./dist/esm/index.mjs --analyze",
         "build:cjs": "esbuild ./src/index.ts --tsconfig=tsconfig.json --minify --bundle --sourcemap --target=node12.22.5 --platform=node --format=cjs --outfile=./dist/cjs/index.js --analyze",
-        "build": "npm run build:esm; npm run build:cjs",
+        "build": "npm run build:esm; npm run build:cjs; npm run dts",
         "build:watch": "tsc -w -p tsconfig.json",
         "prepare": "npm run build",
         "format": "prettier --write \"src/**/*.ts\""
@@ -31,19 +31,25 @@
     },
     "author": "max",
     "license": "ISC",
-    "dependencies": {},
+    "dependencies": {
+        "mongoose": "^7.6.4"
+    },
     "devDependencies": {
+        "@types/mongoose": "^5.11.97",
         "@types/node": "^14.17.11",
         "@typescript-eslint/eslint-plugin": "^5.62.0",
         "@typescript-eslint/parser": "^5.56.0",
         "esbuild": "^0.19.11",
-        "prettier": "^2.8.8",
-        "typescript": "^4.9.5",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^8.10.0",
         "eslint-plugin-jsdoc": "^40.3.0",
         "eslint-plugin-prefer-arrow": "^1.2.3",
         "eslint-plugin-prettier": "^4.2.1",
-        "eslint-plugin-sort-destructure-keys": "^1.6.0"
-    }
+        "eslint-plugin-sort-destructure-keys": "^1.6.0",
+        "prettier": "^2.8.8",
+        "typescript": "^4.9.5"
+    },
+    "files": [
+        "dist"
+    ]
 }

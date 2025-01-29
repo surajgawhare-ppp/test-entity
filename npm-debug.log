@@ -1,0 +1,42 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/home/surajbaburaogawhare/.nvm/versions/node/v20.3.0/bin/node',
+1 verbose cli   '/home/surajbaburaogawhare/node_modules/.bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'build'
+1 verbose cli ]
+2 info using npm@2.15.12
+3 info using node@v20.3.0
+4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+5 info prebuild testentity@1.2.2
+6 verbose unsafe-perm in lifecycle true
+7 info testentity@1.2.2 Failed to exec prebuild script
+8 verbose stack Error: testentity@1.2.2 prebuild: `npm run lint`
+8 verbose stack Exit status 1
+8 verbose stack     at EventEmitter.<anonymous> (/home/surajbaburaogawhare/node_modules/npm/lib/utils/lifecycle.js:217:16)
+8 verbose stack     at EventEmitter.emit (node:events:511:28)
+8 verbose stack     at ChildProcess.<anonymous> (/home/surajbaburaogawhare/node_modules/npm/lib/utils/spawn.js:24:14)
+8 verbose stack     at ChildProcess.emit (node:events:511:28)
+8 verbose stack     at maybeClose (node:internal/child_process:1098:16)
+8 verbose stack     at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+9 verbose pkgid testentity@1.2.2
+10 verbose cwd /home/surajbaburaogawhare/Desktop/initial practice/testentity
+11 error Linux 5.15.0-127-generic
+12 error argv "/home/surajbaburaogawhare/.nvm/versions/node/v20.3.0/bin/node" "/home/surajbaburaogawhare/node_modules/.bin/npm" "run" "build"
+13 error node v20.3.0
+14 error npm  v2.15.12
+15 error code ELIFECYCLE
+16 error testentity@1.2.2 prebuild: `npm run lint`
+16 error Exit status 1
+17 error Failed at the testentity@1.2.2 prebuild script 'npm run lint'.
+17 error This is most likely a problem with the testentity package,
+17 error not with npm itself.
+17 error Tell the author that this fails on your system:
+17 error     npm run lint
+17 error You can get information on how to open an issue for this project with:
+17 error     npm bugs testentity
+17 error Or if that isn't available, you can get their info via:
+17 error
+17 error     npm owner ls testentity
+17 error There is likely additional logging output above.
+18 verbose exit [ 1, true ]

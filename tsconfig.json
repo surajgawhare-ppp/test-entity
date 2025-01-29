@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "ESNext",
+    "target": "esnext",
+    "module": "commonjs",
     "moduleResolution": "Node",
     "strict": true,
     "esModuleInterop": true,
@@ -24,8 +24,9 @@
         "@types/*": ["./types/*"]
     },
     "types": ["node"],
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types"],
+    "allowJs": true
   },
-  "include": [".eslintrc.js", "src/**/*.ts", "dist/**/*.ts"],
+  "include": [".eslintrc.js", "./src/**/*.ts", "dist/**/*.ts"],
   "exclude": ["node_modules"]
 }

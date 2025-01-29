@@ -1,12 +1,21 @@
-export enum testEntityVar {
-    mongo = 'maximum',
-    typo = 'royal',
-    vivo = 'next',
-    max = 'tool',
-    goal = 'goal',
-}
+import { Schema } from 'mongoose';
 
-export const MyConstVar = {
-    yes: 'not out',
-    no: 'out',
-};
+export const BankWorkingDaySchema: Schema = new Schema(
+    {
+        date: {
+            type: String,
+            required: true,
+        },
+        isBankWorking: {
+            type: Boolean,
+            required: true,
+        },
+        detail: {
+            type: String,
+            required: false,
+        },
+    },
+    {
+        timestamps: true,
+    },
+);
