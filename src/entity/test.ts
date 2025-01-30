@@ -70,7 +70,6 @@ export const tokenSchema: Schema = new Schema(
                         type: String,
                         required: false,
                     },
-                    required: false,
                 },
                 signedComplianceForm: {
                     SAQ_FileId: {
@@ -86,7 +85,6 @@ export const tokenSchema: Schema = new Schema(
                         type: String,
                         required: false,
                     },
-                    required: false,
                 },
                 SAQ_Expiry: {
                     type: Date,
