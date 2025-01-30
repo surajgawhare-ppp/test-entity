@@ -1,23 +1,111 @@
 import { Schema } from 'mongoose';
 
-export const tokenSchema: Schema = new Schema<any>(
+export const tokenSchema: Schema = new Schema(
     {
-        userId: {
+        businessId: {
             type: Schema.Types.ObjectId,
-            trim: true,
             required: true,
         },
-
-        token: {
+        provider: {
             type: String,
-            trim: true,
-            required: true,
         },
-        status: {
+        merchantStatus: {
             type: String,
-            trim: true,
-            default: 'Active',
         },
+        expectedAnnualCardVolume: {
+            type: Number,
+            required: false,
+        },
+        securityInfo: {
+            userAgent: {
+                type: String,
+                required: false,
+            },
+            ipAddress: {
+                type: String,
+                required: false,
+            },
+            timestamp: {
+                type: Date,
+                required: false,
+            },
+        },
+        rejectionCode: {
+            type: String,
+            required: false,
+        },
+        rejectionReason: {
+            type: String,
+            required: false,
+        },
+        pciCompliance: [
+            {
+                finixComplianceId: {
+                    type: String,
+                    required: false,
+                },
+                SAQ_SubmissionGracePeriodExpiry: {
+                    type: Date,
+                    required: false,
+                },
+                SAQ_SubmittedBy: {
+                    type: Schema.Types.ObjectId,
+                    required: false,
+                },
+                SAQ_SubmittedByTitle: {
+                    type: String,
+                    required: false,
+                },
+                unsignedComplianceForm: {
+                    SAQ_FileId: {
+                        type: String,
+                        required: false,
+                    },
+                    cloudFilePath: {
+                        type: String,
+                        trim: true,
+                        required: false,
+                    },
+                    s3BucketURL: {
+                        type: String,
+                        required: false,
+                    },
+                    required: false,
+                },
+                signedComplianceForm: {
+                    SAQ_FileId: {
+                        type: String,
+                        required: false,
+                    },
+                    cloudFilePath: {
+                        type: String,
+                        trim: true,
+                        required: false,
+                    },
+                    s3BucketURL: {
+                        type: String,
+                        required: false,
+                    },
+                    required: false,
+                },
+                SAQ_Expiry: {
+                    type: Date,
+                    required: false,
+                },
+                SAQ_status: {
+                    type: String,
+                    required: false,
+                },
+                createdAt: {
+                    type: Date,
+                    required: false,
+                },
+                updatedAt: {
+                    type: Date,
+                    required: false,
+                },
+            },
+        ],
     },
     {
         timestamps: true,
