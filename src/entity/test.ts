@@ -2,6 +2,9 @@ import { Schema } from 'mongoose';
 
 export const tokenSchema: Schema = new Schema(
     {
+        mongowa: {
+            type: String,
+        },
         businessId: {
             type: Schema.Types.ObjectId,
             required: true,
