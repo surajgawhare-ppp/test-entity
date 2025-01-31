@@ -2,7 +2,7 @@ import { Schema } from 'mongoose';
 
 export const tokenSchema: Schema = new Schema(
     {
-        mongowaDa: {
+        tailowswift: {
             type: String,
         },
         businessId: {
